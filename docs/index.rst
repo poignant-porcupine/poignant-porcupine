@@ -10,7 +10,7 @@ poignant-porcupine documentation
    :maxdepth: 2
    :caption: Contents:
 
-Welcome to the Adamant Armadillo documentation.
+Welcome to the Poignant Porcupine documentation.
 
 Libraries
 ----------

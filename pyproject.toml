@@ -31,3 +31,72 @@ files = [
     "libs/poignant-porcupine-domain/src/**/*.py",
     "libs/poignant-porcupine-domain/test/**/*.py",
 ]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+line-length = 120
+indent-width = 4
+target-version = "py314"
+src = [
+    "libs/poignant-porcupine-core/src",
+    "libs/poignant-porcupine-core/test",
+    "libs/poignant-porcupine-domain/src",
+    "libs/poignant-porcupine-domain/test",
+]
+
+[tool.ruff.lint]
+select = [
+    "D",
+    "E",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "W",
+]
+ignore = [
+    "D203",
+    "D213",
+]
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+"docs/**" = ["D100",]
+"libs/**/docs/**" = ["D100",]
+"libs/**/test/**" = ["D100", "D103",]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "poignant_porcupine_core",
+    "poignant_porcupine_domain",
+]

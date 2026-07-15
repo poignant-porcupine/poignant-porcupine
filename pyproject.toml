@@ -122,3 +122,8 @@ fail_under = 100
 show_missing = true
 skip_covered = true
 skip_empty = true
+
+[dependency-groups]
+docs = [
+    "sphinx>=9.1.0",
+]

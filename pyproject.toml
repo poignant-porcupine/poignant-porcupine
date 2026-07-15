@@ -11,3 +11,7 @@ members = [
     "libs/poignant-porcupine-core",
     "libs/poignant-porcupine-domain",
 ]
+
+[tool.black]
+line-length = 120
+target-version = ["py314"]

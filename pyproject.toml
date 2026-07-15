@@ -100,3 +100,25 @@ known-first-party = [
     "poignant_porcupine_core",
     "poignant_porcupine_domain",
 ]
+
+[tool.pytest.ini_options]
+addopts = "--cov"
+strict_markers = true
+strict_xfail = true
+testpaths = [
+    "libs/poignant-porcupine-core/test",
+    "libs/poignant-porcupine-domain/test",
+]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "libs/poignant-porcupine-core/src/poignant_porcupine_core",
+    "libs/poignant-porcupine-domain/src/poignant_porcupine_domain",
+]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+skip_covered = true
+skip_empty = true
